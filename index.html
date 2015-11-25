@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Project</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Tristan Mills">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.4/js.cookie.min.js"></script>
+
+	<style>
+
+	</style>
+
+	<script>
+	jQuery(document).ready(function($) {
+		if (Cookies.set('cookie-test', '1')) {
+			Cookies.remove('cookie-test');
+			$('#cookies-alert').alert('close');
+			$('input, select, button').prop('disabled', false);
+		} else {
+			$('#cookies-alert').removeClass('hidden');
+		}
+	});
+	</script>
+
+</head>
+<body>
+
+	<header role="banner">
+		<div class="container">
+			<h1>Project</h1>
+			<p>A project description.</p>
+		</div>
+	</header>
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-xs-12" role="main">
+
+				<noscript>
+					<div class="alert alert-danger" role="alert">
+						<span>JavaScript is disabled in your web browser. JavaScript is required use this tool. Here are the <a class="alert-link" href="http://enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</span>
+					</div>
+				</noscript>
+
+				<div id="cookies-alert" class="alert alert-danger hidden" role="alert">
+					<span>Cookies are disabled in your web browser. Cookies must be enabled to use this tool. Here are the <a class="alert-link" href="https://support.google.com/accounts/answer/61416" target="_blank">instructions how to enable Cookies in your web browser</a>.</span>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<footer role="contentinfo">
+		<div class="container">
+
+		</div>
+	</footer>
+
+</body>
+</html>
